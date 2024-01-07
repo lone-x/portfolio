@@ -66,7 +66,7 @@ tl.to(".hero", {}, 'a')
   .to(".hero .content", {
     top: "-30%",
     delay: -0.4,
-    margin: "10% 0",   
+    margin: "0% 0",   
   }, 'b')
   .from(".hero .img", {
     y:'100%',
@@ -74,12 +74,17 @@ tl.to(".hero", {}, 'a')
     opacity: 0
   }, '-=.4')
   .from(".content h1", {
-    xPercent: -100,
+    xPercent: 100,
     opacity: 0,
     ease: "ease.in.out",
 }, '-=.4')
 .from(".subheader", {
-    xPercent: -100,
+    xPercent: 60,
+    opacity: 0,
+    ease: "ease.in.out",
+}, '-=.4')
+.from(".btn_main", {
+    xPercent: 60,
     opacity: 0,
     ease: "ease.in.out",
 }, '-=.4');
