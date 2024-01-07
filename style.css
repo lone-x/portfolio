@@ -207,7 +207,7 @@ a{
     transition: transform 0.3s ease;
 }
 .menu-item:hover{
-    transform: translateX(-10px);
+    scale: 1.1;
 }
 .menu.active + .menu-button{
     background-color: #455ce9;
@@ -226,6 +226,7 @@ a{
     text-shadow: 0 0 50px 15px #48abe050;
 }
 .tribox_container{
+    padding: 2.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,5 +283,7 @@ a{
     transition-duration: 0.8s;
 }
 
-
+.menu-items:hover .menu-item:not(:hover){
+    opacity: 0.5;
+}
 

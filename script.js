@@ -52,7 +52,7 @@ const tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".main",
         start: "50% 50%",
-        end: "150% 0%",
+        end: "150% 50%",
         scrub: true,
         pin: true,
     }
@@ -96,3 +96,28 @@ gsap.from(".char", {
     ease: "back.out",
     duration: 1,    
 });
+const tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".second",
+        start: () => window.innerWidth > 1024 ? "0% 50%" : "0% 60%",
+        end: () => window.innerWidth > 1024 ? "0% 0%" : "30% 0%",
+        scrub: true,
+        markers: false,
+        pin: false
+    }
+});
+tl2.from(".second-h2", {
+    xPercent: -100,
+    opacity: 0,
+    ease: "ease.in",
+    duration: 1,
+},'-=.4')
+.from (".tribox", {
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "back.out",
+    duration: 1,
+},'-=.4');
+
+
